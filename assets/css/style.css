@@ -15,7 +15,8 @@ body{
         color:#042949;
       }
 
-     h1 {
+     h1,
+     h2 {
         margin-bottom: 1rem;
       }
 
@@ -23,6 +24,13 @@ body{
         font-size: 5.4rem;
         color: #56a5eb;
         margin-bottom: 5rem;
+      }
+
+      h2 {
+        font-size: 4.2rem;
+        margin-bottom: 4rem;
+        font-weight: 700;
+        color: white;
       }
     
 /* FLEX-BOX CONTAINER */
@@ -82,3 +90,31 @@ body{
     transition: transform 150ms;
   }
   
+/* GAME PAGE */
+
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 50%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #56a5eb;
+  color: white;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
