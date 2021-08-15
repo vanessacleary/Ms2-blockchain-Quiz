@@ -1,13 +1,12 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+  
 
-let currentQuestion ={}
-let acceptingAnswers = false;
+let currentQuestion ={};
+let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions =[]
-
-let question = []
+let availableQuestions =[];
 
 let questions = [
     {
@@ -19,8 +18,8 @@ let questions = [
        answer: 1
    
     },
-    "questions" = 
-        {
+
+      {
            question: "Which of the following is popularly used for storing bitcoins?",
            choice1: "Pocket",
            chocie2: "Wallet",
@@ -29,7 +28,7 @@ let questions = [
            answer: 2
        
         },
-        "questions" = 
+
             {
                question: "Which of the following is popularly used for storing bitcoins?",
                choice1: "Pocket",
@@ -39,7 +38,8 @@ let questions = [
                answer: 3
            
             },
-            "questions" = {
+
+            {
                    question:"Which of the following is popularly used for storing bitcoins?",
                    choice1: "Pocket",
                    chocie2: "Wallet",
@@ -48,6 +48,39 @@ let questions = [
                    answer: 4
                
                 },
-            ]  
+            ];  
+
+
+   // Constanants
+    const CORRECT_BONUS = 10;
+    const MAX_Questions = 4;
+
+    startGame = () => {
+       questionCounter = 0;
+       availableQuestions = [... questions];
+       console.log(availableQuestions);
+       getNewQuestion();
+    };
+
+    getNewQuestion = () => {
+       questionCounter++;
+       const questionIndex = Math.floor(Math.random() * availableQuestions.lenght);
+       currentQuestion = availableQuestions[questionIndex];
+       question.innerText = currentQuestion.question; 
+   
+       choices.forEach( choice => {
+          const number = choice.dataset['number'];
+          choice.innerText = currentQuestion['choice + number'];
+       });
+
+        availableQuestions.splice(question.Index, 1);
+        acceptingAnswers = true;
+   };
+
+   choices.forEach(choice => {
+      choice.addEventListener("click", e => {
+         console.log(e.target);
+      });
+   });
 
     startGame();
