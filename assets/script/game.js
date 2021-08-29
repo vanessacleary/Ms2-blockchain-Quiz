@@ -119,6 +119,4 @@ if(availableQuestions.lenght === 0 || questionCounter >= MAX_Questions){
       scoreText.innerText = score;
    };
 
-
-
     startGame();
