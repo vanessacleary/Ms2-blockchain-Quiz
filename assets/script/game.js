@@ -56,7 +56,7 @@ let questions = [
 
    // Constanants
     const CORRECT_BONUS = 10;
-    const MAX_Questions = 4;
+    const MAX_QUESTIONS = 4;
 
     startGame = () => {
        questionCounter = 0;
@@ -66,7 +66,7 @@ let questions = [
     };
 
     getNewQuestion = () => {
-if(availableQuestions.lenght === 0 || questionCounter >= MAX_Questions){
+if(availableQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS){
    //GO TO THE END PAGE
    return window.location.assign('/end.html');
 }
@@ -75,9 +75,11 @@ if(availableQuestions.lenght === 0 || questionCounter >= MAX_Questions){
    // UPDATE THE PROGRESS BAR
    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-       const questionIndex = Math.floor(Math.random() * availableQuestions.lenght);
+       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
        currentQuestion = availableQuestions[questionIndex];
+       console.log(currentQuestion);
        question.innerText = currentQuestion.question; 
+       
    
        choices.forEach( choice => {
           const number = choice.dataset['number'];
