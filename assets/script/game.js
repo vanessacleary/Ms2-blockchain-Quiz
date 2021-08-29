@@ -98,6 +98,11 @@ if(availableQuestions.lenght === 0 || questionCounter >= MAX_Questions){
          const classToApply =
          selectedAnswer = currentQuestion.answer ? "correct" : "incorrect";
          
+
+         if(classToApply === 'correct')  {
+            incrementScore(CORRECT_BONUS);
+         }
+
          selectedChoice.parentElement.classList.add('classToApply');
 
          setTimeout( () => {
@@ -107,5 +112,12 @@ if(availableQuestions.lenght === 0 || questionCounter >= MAX_Questions){
  
       });
    });
+
+   incrementScore = num => {
+      score +=num;
+      scoreText.innerText = score;
+   };
+
+
 
     startGame();
