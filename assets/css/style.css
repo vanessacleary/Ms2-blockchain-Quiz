@@ -119,3 +119,14 @@ body{
   padding: 1.5rem;
   width: 100%;
 }
+
+/* correct and incorrect */
+
+.correct {
+  background-color: #28a745;
+}
+
+.incorrect {
+  background-color: #dc3545;
+}
+
