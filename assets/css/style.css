@@ -130,3 +130,18 @@ body{
   background-color: #dc3545;
 }
 
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
