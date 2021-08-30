@@ -3,123 +3,138 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
-  
 
-let currentQuestion ={};
+
+let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions =[];
+let availableQuestions = [];
 
-let questions = [
-    {
-       question: "Which of the following is popularly used for storing bitcoins?",
-       choice1: "Pocket",
-       chocie2: "Wallet",
-       choice3: "Box",
-       choice4: "Stack",
-       answer: 1
-   
-    },
+let questions = [];
 
-      {
-           question: "What is a blockchain?",
-           choice1: "A blockchain is a centralized digital ledger consisting of records called blocks.",
-           chocie2: "A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks.",
-           choice3: "A blockchain is a digital database consisting of records called class.",
-           choice4: "None of the above",
-           answer: 2
-       
-        },
+fetch("questions.json")
+   .then(res => {
+      return res.json();
 
-            {
-               question:"Bitcoin is created by ________.",
-               choice1: "Saifedean Ammous",
-               chocie2: "Satoshi Nakamoto",
-               choice3: "Vitalik Buterin",
-               choice4: "None of the above",
-               answer: 3
-           
-            },
+   })
+   .then(loadedQuestions => {
+      console.log(res);
+      questions = loadedQuestions;
+      startGame();
+   })
+   .catch( err => {
+   console.error(err);
+   });
 
-            {
-                   question:"Proof of Stake is __________.",
-                   choice1: "A transaction and block verification protocol",
-                   chocie2: "A certificate needed to use the blockchain",
-                   choice3: "Both A and B",
-                   choice4: "None of the above",
-                   answer: 4
-               
-                },
-            ];  
+//  {
+//     question: "Which of the following is popularly used for storing bitcoins?",
+//     choice1: "Pocket",
+//     chocie2: "Wallet",
+//     choice3: "Box",
+//     choice4: "Stack",
+//     answer: 1
+
+//  },
+
+//    {
+//         question: "What is a blockchain?",
+//         choice1: "A blockchain is a centralized digital ledger consisting of records called blocks.",
+//         chocie2: "A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks.",
+//         choice3: "A blockchain is a digital database consisting of records called class.",
+//         choice4: "None of the above",
+//         answer: 2
+
+//      },
+
+//          {
+//             question:"Bitcoin is created by ________.",
+//             choice1: "Saifedean Ammous",
+//             chocie2: "Satoshi Nakamoto",
+//             choice3: "Vitalik Buterin",
+//             choice4: "None of the above",
+//             answer: 3
+
+//          },
+
+//          {
+//                 question:"Proof of Stake is __________.",
+//                 choice1: "A transaction and block verification protocol",
+//                 chocie2: "A certificate needed to use the blockchain",
+//                 choice3: "Both A and B",
+//                 choice4: "None of the above",
+//                 answer: 4
+
+//              },
+//          ];  
 
 
-   // Constanants
-    const CORRECT_BONUS = 10;
-    const MAX_QUESTIONS = 4;
+// Constanants
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 4;
 
-    startGame = () => {
-       questionCounter = 0;
-       availableQuestions = [... questions];
-       console.log(availableQuestions);
-       getNewQuestion();
-    };
+startGame = () => {
+   questionCounter = 0;
+   availableQuestions = [...questions];
+   console.log(availableQuestions);
+   getNewQuestion();
+};
 
-    getNewQuestion = () => {
-if(availableQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS){
-   localStorage.setItem('mostRecentScore', score);
-   //GO TO THE END PAGE
-   return window.location.assign('/end.html');
-}
-  questionCounter++;
-       progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+getNewQuestion = () => {
+   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+      localStorage.setItem('mostRecentScore', score);
+      //GO TO THE END PAGE
+      return window.location.assign('/end.html');
+   }
+   questionCounter++;
+   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
    // UPDATE THE PROGRESS BAR
    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-       currentQuestion = availableQuestions[questionIndex];
-       console.log(currentQuestion);
-       question.innerText = currentQuestion.question; 
-       
-   
-       choices.forEach( choice => {
-          const number = choice.dataset['number'];
-          choice.innerText = currentQuestion['choice' + number];
-       });
+   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+   currentQuestion = availableQuestions[questionIndex];
+   console.log(currentQuestion);
+   question.innerText = currentQuestion.question;
 
-        availableQuestions.splice(question.Index, 1);
-        acceptingAnswers = true;
-   };
 
    choices.forEach(choice => {
-      choice.addEventListener("click", e => {
-         if(!acceptingAnswers) return;
-
-         acceptingAnswers = false;
-         const selectedChoice = e.target;
-         const selectedAnswer = selectedChoice.dataset["number"];
-
-         const classToApply =
-         selectedAnswer = currentQuestion.answer ? "correct" : "incorrect";
-         
-
-         if(classToApply === 'correct')  {
-            incrementScore(CORRECT_BONUS);
-         }
-
-         selectedChoice.parentElement.classList.add('classToApply');
-
-         setTimeout( () => {
-            selectedChoice.parentElement.classList.remove('classToApply');
-            getNewQuestion();
-         }, 1000);
- 
-      });
+      const number = choice.dataset['number'];
+      choice.innerText = currentQuestion['choice' + number];
    });
 
-   incrementScore = num => {
-      score +=num;
-      scoreText.innerText = score;
-   };
+   availableQuestions.splice(question.Index, 1);
+   acceptingAnswers = true;
+};
 
-    startGame();
+choices.forEach(choice => {
+   choice.addEventListener("click", e => {
+      if (!acceptingAnswers) return;
+
+      acceptingAnswers = false;
+      const selectedChoice = e.target;
+      const selectedAnswer = selectedChoice.dataset["number"];
+
+      const classToApply =
+         selectedAnswer = currentQuestion.answer ? "correct" : "incorrect";
+
+
+      if (classToApply === 'correct') {
+         incrementScore(CORRECT_BONUS);
+      }
+
+      selectedChoice.parentElement.classList.add('classToApply');
+
+      setTimeout(() => {
+         selectedChoice.parentElement.classList.remove('classToApply');
+         getNewQuestion();
+      }, 1000);
+
+   });
+});
+
+incrementScore = num => {
+   score += num;
+   scoreText.innerText = score;
+};
+
+startGame();
