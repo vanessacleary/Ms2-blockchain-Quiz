@@ -5,15 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <title>Blockchain Quiz</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
 
   <div class="container">
+    <!-- Pre-question loader -->
+    <!-- <div id="loader"></div> -->
     <div id="game" class="justify-center flex-column">
-
+      <!-- Heads up display  -->
       <div id="hud">
         <div id="hud-item">
           <p id="progressText" class="hud-prefix">
@@ -35,6 +40,7 @@
         </div>
       </div>
 
+      <!-- Questions & question choices -->
       <h2 id="question">What is the answer to this question</h2>
 
       <div class="choice-container">
@@ -54,13 +60,14 @@
 
       <div class="choice-container">
         <p class="choice-prefix">C</p>
-        <p class="choice-text" data-number="3">Choice 4</p>
+        <p class="choice-text" data-number="4">Choice 4</p>
       </div>
 
     </div>
   </div>
-
-  <script src="assets/script/game.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="assets/js/game.js"></script>
 </body>
 
 </html>
