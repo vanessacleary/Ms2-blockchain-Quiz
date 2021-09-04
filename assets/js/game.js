@@ -4,10 +4,10 @@ const MAX_QUESTIONS = 4;
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById('score');
+const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById('progressBarFull');
-const loader = document.getElementById('loader');
-const loader = document.getElementById('game');
+// const loader = document.getElementById("loader");
+// const loader = document.getElementById("game");
 
 
 // Let
@@ -18,35 +18,15 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 
-// Loads question from jSon
-$.ajax({
-    url: "./assets/data/questions.json",
-    success: function (data, textStatus, jqXHR) {
-        console.log(data);
-        questions = data;
-        startGame();
-    },
-    error: function (jqXHR, textStatus, errorThrow) {
-        console.error(errorThrow);
-    },
-    dataType: "json",
-});
 
-/*
-Load questions
-*/
-//  fetch("questions.json")
-//     .then(res => {
-//         return res.json();
-//      })
-//      .then(loadedQuestions => {
-//          console.log(res);
-//          questions = loadedQuestions;
-//          startGame();
-//      })
-//      .catch(err => {
-//          console.error(err);
-//      });
+fetch('/assets/js/questions.json')
+    .then(res => res.json())
+    .then(data => {
+        questions = data;
+        console.log(data)
+        startGame()
+    })
+    .catch(error => console.log(error))
 
 //start game function
 startGame = () => {
@@ -55,8 +35,10 @@ startGame = () => {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
+     //adds and hides loader while questions load
+    //  game.classList.remove("hidden");
+    //  loader.classList.add("hidden");
 };
-
 
 // Checks if all questions were done, if not goes on the next question and updates the choices
 
