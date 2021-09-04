@@ -225,11 +225,19 @@ input::placholder {
 }
 
 /* Loader */
-/* #loader {
+ #loader {
   border: 1rem solid rgba(86, 185, 235, 0.5);
   border-radius: 50%;
   border-top: 1rem solid rgba(86, 185, 235, 0.5);
   width: 10rem;
   height: 10rem;
-  animation: spin 1.5s linear infinite;
-} */
+  animation: spin 2s linear infinite;
+} 
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+100% {
+  transform: rotate(360deg);
+}
