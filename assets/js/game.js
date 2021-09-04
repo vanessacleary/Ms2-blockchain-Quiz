@@ -7,6 +7,7 @@ const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 
+// Let
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -14,17 +15,18 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 
+// Loads question from jSon
 $.ajax({
-   url: "./assets/data/questions.json",
-   success: function (data, textStatus, jqXHR) {
-      console.log(data);
-      questions = data;
-      startGame();
-   },
-   error: function (jqXHR, textStatus, errorThrow){
-      console.error(errorThrow);
-   },
-   dataType: "json",
+    url: "./assets/data/questions.json",
+    success: function (data, textStatus, jqXHR) {
+        console.log(data);
+        questions = data;
+        startGame();
+    },
+    error: function (jqXHR, textStatus, errorThrow) {
+        console.error(errorThrow);
+    },
+    dataType: "json",
 });
 
 /*
@@ -43,6 +45,7 @@ Load questions
 //          console.error(err);
 //      });
 
+//start game function
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -51,22 +54,21 @@ startGame = () => {
     getNewQuestion();
 };
 
-/*
-Checks if all questions were done, if not goes on the next question and updates the choices
-*/
+
+// Checks if all questions were done, if not goes on the next question and updates the choices
+
 getNewQuestion = () => {
-    // Check if all questions were done, if not go to the end page
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         return window.location.assign('end.html');
     }
 
-    // Update the progress bar
+    // Updates the progress bar
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-    // Update question and choices
+    // Updates question and choices
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     console.log(currentQuestion);
@@ -81,13 +83,11 @@ getNewQuestion = () => {
 };
 
 // Alternative using JQuery
-// $(".choice-text").click(function(e){
-   
+// $(".choice-text").click(function(e){ 
 // });
 
-/*
-Going through all choices and attaching a click event to them
-*/
+
+// Goes through all choices and attaching a click event to them
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!acceptingAnswers) return;
@@ -96,8 +96,10 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
-        const classToApply = selectedAnswer === currentQuestion.answer ? "correct" : "incorrect";
+        //Applies css styling for right or wrong answers choosen 
 
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        //Increments players score for choosing the right answers
         if (classToApply === 'correct') {
             incrementScore(CORRECT_BONUS);
         }

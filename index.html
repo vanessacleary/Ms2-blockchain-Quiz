@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>Blockchain Quiz</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link to bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- link to font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+  <!-- link to custom style sheet -->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <title>Blockchain Quiz</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="flex-center flex-column">
-          <h1 class="text-center">Blockchain Quiz</h1>
+  <div class="container">
+    <div class="flex-center flex-column">
+      <h1 class="text-center">Blockchain Quiz</h1>
+      <!-- how to play button with rules modal -->
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+        How to Play
+      </button>
 
-          <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
-            How to Play
-          </button>
-
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-label="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title" id="exampleModalLongTitle">How to play</h2>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <h3>How much do you know about the Blockchain</h3>
-                  <h3>You will be given 10 random questions.</h3>
-                  <h3>For each question you will have 30 seconds to answer.</h3>
-                  <h3>and each correct answer is worth 10 points.</h3>
-                  <h3>Get a highscore and enter your name to get on the leaderboard.</h3>
-                  <h3>Good Luck!</h3>
-                </div>
-
-                <div class="modal-footer">
-                  <a class="btn" href="game.html">Let's go!</a>
-                  
-                </div>
-              </div>
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>How well do you know the blockchain? Test your knowledge here. You will be given 10 random questions to answer. For each question you will have 30 seconds to answer and each correct answer is worth 10 points. Enter your name to be featured on the leaderboard. Good luck!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Lets play</button>
             </div>
           </div>
-
-          <a class="btn" href="/game.html">Play</a>
-          <a class="btn" href="/highscores.html">High Scores</a>
-
-<div>
-  <ul class="social-media">
-    <li>
-      <a href="https://github.com/vanessacleary" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/vanessaclearyli/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a>
-    </li>
-  </ul>
-</div>
-
         </div>
       </div>
+
+
+
+      <!-- links to game page and highscores page -->
+      <a class="btn" href="/game.html">Play</a>
+      <a class="btn" href="/highscores.html">High Scores</a>
+
+      <!-- social media links -->
+      <div>
+        <ul class="social-media">
+          <li>
+            <a href="https://github.com/vanessacleary" target="_blank" rel="noopener"><i
+                class="fab fa-github-square"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/vanessaclearyli/" target="_blank" rel="noopener"><i
+                class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript and jquery script for bootstrap modal -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
 </body>
 </html>
