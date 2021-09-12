@@ -6,7 +6,7 @@ const scoreText = document.getElementById("score");
 const timeleft = document.getElementById("timeleft");
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById("loader");
-const loader = document.getElementById("game");
+const game = document.getElementById("game");
 //Points per score
 const CORRECT_BONUS = 10;
 //Numner of questions per game
