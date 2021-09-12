@@ -83,16 +83,19 @@ choices.forEach(choice => {
 
         //Applies css styling for right or wrong answers choosen 
 
-        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        const classToApply = 
+        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         //Increments players score for choosing the right answers
-        if (classToApply === 'correct') {
-            incrementScore(CORRECT_BONUS);
-        }
+        selectedChoice.parentElement.classList.add(classToApply);
+      
+        // if (classToApply === 'correct') {
+        //     incrementScore(CORRECT_BONUS);
+        // }
 
         selectedChoice.parentElement.classList.add('classToApply');
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove('classToApply');
+            selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, 1000);
 
