@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #042949;
+  /* color: #042949; */
 } 
 
 /* * {
@@ -133,6 +133,20 @@ p {
   margin-bottom: 0;
 }
 
+.home-icon {
+  font-size: 1rem;
+  color: #56a5eb;
+}
+.home-btn:hover{
+  color: #736DD6;
+
+}
+
+.timer {
+  font-size: 1rem;
+  color: #56a5eb;
+}
+
 /* correct and incorrect */
 
 .correct {
@@ -160,17 +174,20 @@ p {
   text-align: center;
 }
 
+.bottom-display{
+  margin-bottom: 0rem;
+}
 /* progress bar */
 
 #progressBar {
-  width: 20rem;
-  height: 4rem;
-  border: 0.3rem solid #56a5eb;
+  width: 18rem;
+  height: 2rem;
+  border: 0.4rem solid #56a5eb;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
-  height: 3.4rem;
+  height: 1.5rem;
   background-color: #56a5eb;
   width: 0%;
 }
@@ -231,6 +248,10 @@ input::placholder {
   margin: 10px;
 }
 
+.social-media i:hover {
+  color: #736DD6;
+}
+
 /* Loader */
  #loader {
   border: 1rem solid rgba(86, 185, 235, 0.5);
@@ -245,3 +266,17 @@ input::placholder {
   0% { transform: rotate(0deg); }
 100% { transform: rotate(360deg); }
 } 
+
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .timer{
+    font-size: 2rem;
+  }
+}

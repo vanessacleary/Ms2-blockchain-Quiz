@@ -4,6 +4,7 @@ const MAX_QUESTIONS = 4;
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
+const timeleft = document.getElementById("timeleft");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById('progressBarFull');
 // const loader = document.getElementById("loader");
@@ -40,6 +41,23 @@ startGame = () => {
     //  loader.classList.add("hidden");
 };
 
+// Countdown timer for each question
+timer = () => {
+    // Set timer decreases 1 every second
+    time = time - 1;
+    if (time < 30) {
+        // display time left
+        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
+    }
+    if (time < 1) {
+        // moves to next question when time is up
+        clearInterval(update);
+        getNewQuestion();
+    }
+};
+
+
+
 // Checks if all questions were done, if not goes on the next question and updates the choices
 
 getNewQuestion = () => {
@@ -70,6 +88,13 @@ getNewQuestion = () => {
 // Alternative using JQuery
 // $(".choice-text").click(function(e){ 
 // });
+
+
+ // set timer of 30s for each question
+//  time = 30;
+//  update = setInterval("timer()", 1000);
+//  acceptingAnswers = true;
+// };
 
 
 // Goes through all choices and attaching a click event to them
