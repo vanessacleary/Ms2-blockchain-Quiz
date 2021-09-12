@@ -8,16 +8,16 @@ body {
   font-size: 62.5%;
 }
 
- * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   /* color: #042949; */
-} 
+}
 
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 h1,
 h2 {
@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: 2.2rem;
   margin-bottom: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
 }
 
@@ -48,8 +48,8 @@ h2 {
   margin: 0 auto;
 }
 
-  
-.container > * {
+
+.container>* {
   width: 100%;
 }
 
@@ -98,6 +98,14 @@ h2 {
   transition: transform 150ms;
 }
 
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
 /* GAME PAGE */
 
 .choice-container {
@@ -137,7 +145,8 @@ p {
   font-size: 1rem;
   color: #56a5eb;
 }
-.home-btn:hover{
+
+.home-btn:hover {
   color: #736DD6;
 
 }
@@ -174,10 +183,11 @@ p {
   text-align: center;
 }
 
-.bottom-display{
+.bottom-display {
   margin-bottom: 0rem;
 }
-/* progress bar */
+
+/* Progress bar */
 
 #progressBar {
   width: 18rem;
@@ -205,7 +215,7 @@ input {
   margin-bottom: 1rem;
   width: 20rem;
   padding: 1.5rem;
-  font-size:1.8rem;
+  font-size: 1.8rem;
   border: none;
   box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
@@ -229,7 +239,7 @@ input::placholder {
 
 
 .high-score:hover {
-  transform: scale  (1.025);
+  transform: scale(1.025);
 }
 
 /* Soical media */
@@ -253,30 +263,35 @@ input::placholder {
 }
 
 /* Loader */
- #loader {
+#loader {
   border: 1rem solid rgba(86, 185, 235, 0.5);
   border-radius: 50%;
   border-top: 1rem solid rgba(86, 185, 235, 0.5);
   width: 10rem;
   height: 10rem;
   animation: spin 2s linear infinite;
-} 
+}
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-} 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media screen and (max-width: 575px) {
   h1 {
     font-size: 4rem;
   }
 
-  h2{
+  h2 {
     font-size: 2rem;
   }
 
-  .timer{
+  .timer {
     font-size: 2rem;
   }
 }

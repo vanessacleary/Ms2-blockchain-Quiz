@@ -1,5 +1,5 @@
 const username = document.getElementById('username');
-const saveScoreBtn = documentgetElementById('saveScoreBtn');
+const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 finalScore.innerText = mostRecentScore;
@@ -11,7 +11,7 @@ const MAX_HIGH_SCORES = 5;
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
-    saveScoreBtn.dispabled = !username.value;
+    saveScoreBtn.disabled = !username.value;
 });
 
 
