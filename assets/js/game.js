@@ -4,7 +4,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const timeleft = document.getElementById("timeleft");
-const progressBarFull = document.getElementById('progressBarFull');
+const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
 //Points per score
@@ -63,10 +63,11 @@ timer = () => {
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
+        //Saves to local storage
+        localStorage.setItem("mostRecentScore", score);
+        //Takes user to the end page
         return window.location.assign('end.html');
     }
-
     // Updates the progress bar
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -75,14 +76,18 @@ getNewQuestion = () => {
     //Updates question and choices
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    console.log(currentQuestion);
+    // console.log(currentQuestion);
     question.innerText = currentQuestion.question;
+
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
 
+    //Removes used questions
     availableQuestions.splice(question.Index, 1);
+    time = 30;
+    update = setInterval("timer()", 1000);
     acceptingAnswers = true;
 };
 
@@ -91,30 +96,24 @@ getNewQuestion = () => {
 // });
 
 
-// set timer of 30s for each question
-//   time = 30;
-//  update = setInterval("timer()", 1000);
-//  acceptingAnswers = true;
-//  };
-
-
 // Goes through all choices and attaching a click event to them
 choices.forEach(choice => {
-    choice.addEventListener("click", e => {
+    choice.addEventListener('click', e => {
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+        const selectedAnswer = selectedChoice.dataset['number'];
 
         //Applies css styling for right or wrong answers choosen 
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-        const classToApply =
-            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         //Increments players score for choosing the right answers
-        selectedChoice.parentElement.classList.add(classToApply);
+        if (classToApply == 'correct') {
+            incrementScore(CORRECT_BONUS);
+        };
 
-        selectedChoice.parentElement.classList.add('classToApply');
+        selectedChoice.parentElement.classList.add(classToApply);
 
         //Adds delay before next question and removes CSS styling to answers
         setTimeout(() => {
