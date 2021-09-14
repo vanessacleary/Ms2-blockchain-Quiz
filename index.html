@@ -20,34 +20,36 @@
   <div class="container">
     <div class="flex-center flex-column">
       <h1 class="text-center">Blockchain Quiz</h1>
-      <!-- How to play button -->
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
-        How to Play
-      </button>
-<!-- Modal from bootstrap -->
-      <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">How to Play</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
 
-            <div class="modal-body">
-              <p>How well do you know the blockchain? Test your knowledge here. You will be given 10 random questions to
-                answer. For each question you will have 30 seconds to answer and each correct answer is worth 10 points.
-                Enter your name to be featured on the leaderboard. Good luck!</p>
-            </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Lets play</button>
-            </div>
-          </div>
-        </div>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">How to Play</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <p>How well do you know the blockchain? Test your knowledge here. You will be given 10 random questions to
+          answer. For each question you will have 30 seconds to answer and each correct answer is worth 10 points.
+          Enter your name to be featured on the leaderboard. Good luck!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn-modal btn-primary">Lets plays</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Links to game page and highscores page -->
       <a class="btn" href="game.html">Play</a>
