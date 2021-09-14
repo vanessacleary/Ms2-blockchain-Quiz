@@ -31,11 +31,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   font-weight: 500;
   color: white;
 }
+
 
 /* FLEX-BOX CONTAINER */
 .container {
@@ -81,8 +82,8 @@ h2 {
 /* BUTTONS */
 .btn {
   font-size: 1.8rem;
-  padding: 1rem 0;
-  width: 20rem;
+  padding: .5rem 0;
+  width: 18rem;
   text-align: center;
   border: 0.2rem solid #56a5eb;
   margin-bottom: 1rem;
@@ -142,7 +143,12 @@ p {
 }
 
 .home-icon {
-  font-size: 1rem;
+  font-size: 2rem;
+  color: #56a5eb;
+}
+
+.timer {
+  font-size: 2rem;
   color: #56a5eb;
 }
 
@@ -186,6 +192,11 @@ p {
 .bottom-display {
   margin-bottom: 0rem;
 }
+
+.bottom-display {
+    display: flex;
+    justify-content: space-between;
+  }
 
 /* Progress bar */
 
@@ -282,6 +293,36 @@ input::placholder {
 .high-score {
   font-size: 30px;
   color: #fff;
+}
+
+
+.modal-header{
+  background-color: #56a5eb;
+}
+
+.modal-body {
+  background-color: #56a5eb;
+}
+
+.modal-body {
+  font-size: 1.8rem;
+}
+
+.modal-footer {
+  background-color: #56a5eb;
+}
+
+
+.btn-modal {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 10rem;
+  text-align: center;
+  border: 0.2rem solid #56a5eb;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #56a5eb;
+  background-color: white;
 }
 
 

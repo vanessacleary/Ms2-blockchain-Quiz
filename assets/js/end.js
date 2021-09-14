@@ -5,9 +5,6 @@ const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 finalScore.innerText = mostRecentScore;
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const goodEffort = document.getElementById("good-effort");
-const congrats = document.getElementById("congrats");
-const noGood = document.getElementById("no-good");
 //Number of highscores to be saved and shown on highscores page 
 const MAX_HIGH_SCORES = 5;
 
@@ -15,17 +12,6 @@ let highScoresArray = [];
 highScores.forEach(function (obj) {
   highScoresArray.push(obj.score);
 });
-
-// Compare the most rencent score with the scores in the highScoreArray
-if (mostRecentScore > Math.max(...highScoresArray)) {
-    //Displays congrats message for a new high sore
-    congrats.classList.remove("hidden");
-  } else if (mostRecentScore == 0) {
-    noGood.classList.remove("hidden");
-  } else {
-    //Display a good effort message if it's not a new high score
-    goodEffort.classList.remove("hidden");
-  }
 
 finalScore.innerText = mostRecentScore;
 
