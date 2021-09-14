@@ -27,7 +27,7 @@ h2 {
 h1 {
   font-size: 3.4rem;
   color: #56a5eb;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 h2 {
@@ -181,7 +181,7 @@ p {
 
 .hud-prefix {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #56a5eb;
 }
 
