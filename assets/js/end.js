@@ -1,25 +1,18 @@
 //Constants
-const username = document.getElementById('username');
-const saveScoreBtn = document.getElementById('saveScoreBtn');
-const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-finalScore.innerText = mostRecentScore;
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const finalScore = document.getElementById("finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-//Number of highscores to be saved and shown on highscores page 
-const MAX_HIGH_SCORES = 5;
+console.log(highScores);
 
-let highScoresArray = [];
-highScores.forEach(function (obj) {
-  highScoresArray.push(obj.score);
-});
-
-finalScore.innerText = mostRecentScore;
+finalScore.innerTEXT = mostRecentScore;
 
 //Disables the save score button if no name put in
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
 });
-
 
 saveHighScore = (event) => {
     event.preventDefault();
