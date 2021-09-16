@@ -12,9 +12,9 @@
 
     {
         "question": "What is a blockchain?",
-        "choice1": "A blockchain is a centralized digital ledger consisting of records called blocks.",
-        "choice2": "A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks.",
-        "choice3": "A blockchain is a digital database consisting of records called class.",
+        "choice1": "A centralized digital ledger consisting of records called blocks.",
+        "choice2": "A a decentralized, distributed, digital ledger consisting of records called blocks.",
+        "choice3": "A digital database consisting of records called class.",
         "choice4": "None of the above",
         "answer": 2
 
@@ -30,13 +30,121 @@
 
     },
 
-    {
-        "question": "Proof of Stake is __________.",
-        "choice1": "A transaction and block verification protocol",
-        "choice2": "A certificate needed to use the blockchain",
-        "choice3": "Both A and B",
-        "choice4": "None of the above",
-        "answer": 1
 
-    }
+{
+    "question": "What does P2P stand for?",
+
+    "choice1": "Password to Password",
+    "choice2": "Peer to Peer",
+    "choice3": "Product to Product",
+    "choice4": "Private Key to Public Key",
+    "answer": 2
+   
+},
+
+{
+    "question": "What is a node?",
+
+    "choice1": "A type of cryptocurrency",
+    "choice2": "A Blockchain",
+    "choice3": "A computer on a Blockchain network",
+    "choice4": "An exchange",
+    "answer": 3
+},
+
+{
+    "question": "What is a miner?",
+
+    "choice1": "A type of blockchain",
+    "choice2": "An algorithm that predicts the next part of the chain",
+    "choice3": "A person doing calculations to verify a transaction",
+    "choice4": "Computers that validate and process blockchain transactions",
+    "answer": 4
+},
+
+{
+    "question": "What is a blockchain?",
+
+    "choice1": "A distributed ledger on a peer to peer network",
+    "choice2": "A type of cryptocurrency",
+    "choice3": " An exchange",
+    "choice4": "A centralized ledger",
+    "answer": 1
+},
+
+{
+    "question": "What is a dApp?",
+
+    "choice1": " A type of Cryptocurrency",
+    "choice2": "A condiment",
+    "choice3": "A type of blockchain",
+    "choice4": "A decentralized application",
+    "answer": 4
+},
+
+{
+    "question": "What is the term for when a blockchain splits?",
+
+    "choice1": " A fork",
+    "choice2": " A merger",
+    "choice3": "A sidechain",
+    "choice4": "A division",
+    "answer": 1
+},
+
+{
+    "question": "What is the purpose of a nonce?",
+
+    "choice1": "Follows nouns",
+    "choice2": "A hash function",
+    "choice3": "Prevents double spending",
+    "choice4": " Sends information to the blockchain network",
+    "answer": 3
+},
+
+
+{
+    "question": "What is cold storage?",
+
+    "choice1": "A private key connected to the Internet",
+    "choice2": "A private key not connected to the Internet",
+    "choice3": "A desktop wallet",
+    "choice4": "A locker",
+    "answer": 2
+},
+
+
+{
+    "question": "What is a private key?",
+
+    "choice1": "A key on your keychain",
+    "choice2": "A key given to the public",
+    "choice3": "A key NOT to be given to the public",
+    "choice4": "A key that opens a secret door",
+    "answer": 3
+},
+
+
+{
+    "question": "What is Proof of Stake?",
+
+    "choice1": " A certificate needed to use the blockchain",
+    "choice2": "A password needed to access an exchange",
+    "choice3": "How private keys are made",
+    "choice4": "A transaction and block verification protocol",
+    "answer": 4
+},
+
+
+{
+    "question": "How often does Bitcoin ledger reconcile?",
+
+    "choice1": " Every day",
+    "choice2": "Every 3 months",
+    "choice3": " Every 3 Minutes",
+    "choice4": " Every 10 Minutes",
+    "answer": 4
+}
+
+
 ]
