@@ -7,9 +7,8 @@ const mostRecentScore = localStorage.getItem('mostRecentScore');
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const MAX_HIGH_SCORES = 5;
-  
 
-finalScore.innerText = mostRecentScore; //Not working
+finalScore.innerText = mostRecentScore;
 
 //Disables the save score button if no name put in
 username.addEventListener('keyup', () => {

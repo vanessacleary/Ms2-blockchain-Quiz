@@ -7,14 +7,13 @@ const timeleft = document.getElementById("timeleft");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
-const questionTime = 30;
+const questionTime = 60;
 const questionDelay = 300;
 const oneSecond = 1000;
 //Points per score
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 1;
 //Numner of questions per game
 const MAX_QUESTIONS = 10;
-
 
 //Let
 let currentQuestion = {};
@@ -23,59 +22,59 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
+// Initialize to the maximum time for the first question
+let time = questionTime;
 
-
-/*
-Pulling questions from Json file
+/* 
+Pulling questions from Json file 
 */
-fetch('/assets/js/questions.json')
+fetch('./assets/js/questions.json')
     .then(res => res.json())
     .then(data => {
         questions = data;
         startGame()
     })
     .catch((error) => {
-        alert("couldnt load questions")
+        alert("Couldn't load questions")
     })
 
-/*
-Start Game function
-*/
+/* Start game function */
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
+
     // Adds and hides loader while questions load
     game.classList.remove("hidden");
     loader.classList.add("hidden");
 
+    // Reset time and start the timer
     resetTimer();
-    update = setInterval("timer"(), oneSecond);
+    update = setInterval("timer()", oneSecond);
 };
 
-/*
-Countdown timer for each question
-*/
-
+//Countdown timer for each question
 timer = () => {
     //Set timer decreases 1 every second
     time = time - 1;
-    if (time <= questionTime)
-    //Display time left
-    {
-        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`
+    if (time <= questionTime) {
+        //Display time left
+        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
     }
-    if (time < 1) {
+    if (time <= 0) {
         //Moves to next question when time is up
         resetTimer();
         getNewQuestion();
     }
 };
 
-//Checks if all questions are done, if not it goes on the next question and updates the choices
+/* Reset the time */
+resetTimer = () => {
+    time = questionTime;
+}
 
+//Checks if all questions are done, if not it goes on the next question and updates the choices
 getNewQuestion = () => {
     resetTimer();
 
@@ -87,7 +86,6 @@ getNewQuestion = () => {
         return window.location.assign('end.html');
     }
 
-
     // Updates the progress bar
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -96,26 +94,18 @@ getNewQuestion = () => {
     //Updates question and choices
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    // console.log(currentQuestion);
     question.innerText = currentQuestion.question;
 
+    // Setting choices
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
 
-    //Removes used questions
-    availableQuestions.splice(question.Index, 1);
-    time = 30;
-    update = setInterval("timer()", 1000);
+    // Removes used questions
+    availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
-
-/* Resets the time */
-
-resetTimer = () => {
-    time = quesstionTime;
-}
 
 // Goes through all choices and attaching a click event to them
 choices.forEach(choice => {
@@ -131,7 +121,7 @@ choices.forEach(choice => {
 
         //Increments players score for choosing the right answers
         if (classToApply == 'correct') {
-            incrementScore(CORRECT_BONUS);
+            incrementScore();
         };
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -141,11 +131,10 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, questionDelay);
-
     });
 });
 
-incrementScore = num => {
+incrementScore = () => {
     score += CORRECT_BONUS;
     scoreText.innerText = score;
 };

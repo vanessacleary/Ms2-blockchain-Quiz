@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
   background: url("../images/blockchain_background.JPG") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'poppins';
+  font-family: 'Rubik', sans-serif;
   font-size: 62.5%;
 }
 
