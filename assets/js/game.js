@@ -7,12 +7,12 @@ const timeleft = document.getElementById("timeleft");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
-const questionTime = 60;
+const questionTime = 30;
 const questionDelay = 300;
 const oneSecond = 1000;
 //Points per score
 const CORRECT_BONUS = 1;
-//Numner of questions per game
+//Number of questions per game
 const MAX_QUESTIONS = 10;
 
 //Let

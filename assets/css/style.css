@@ -8,13 +8,13 @@ body {
   background-size: cover;
   font-family: 'Rubik', sans-serif;
   font-size: 62.5%;
+  color:#0c0f1e;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
-  /* color: #042949; */
+  padding: 0; \
 }
 
 
@@ -38,6 +38,7 @@ h2 {
 
 
 /* FLEX-BOX CONTAINER */
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -296,11 +297,13 @@ input::placholder {
 
 
 .modal-header{
-  background-color: #56a5eb;
+  background: rgb(86,165,235);
+  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
 }
 
 .modal-body {
-  background-color: #56a5eb;
+  background: rgb(86,165,235);
+  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
 }
 
 .modal-body {
@@ -308,7 +311,9 @@ input::placholder {
 }
 
 .modal-footer {
-  background-color: #56a5eb;
+  background: rgb(86,165,235);
+  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
+  
 }
 
 
