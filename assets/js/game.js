@@ -7,10 +7,13 @@ const timeleft = document.getElementById("timeleft");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
+const questionTime = 30;
+const questionDelay = 300;
+const oneSecond = 1000;
 //Points per score
 const CORRECT_BONUS = 10;
 //Numner of questions per game
-const MAX_QUESTIONS = 4;
+const MAX_QUESTIONS = 10;
 
 
 //Let
@@ -22,39 +25,51 @@ let availableQuestions = [];
 let questions = [];
 
 
-//Pulling questions from Json file
+/*
+Pulling questions from Json file
+*/
 fetch('/assets/js/questions.json')
     .then(res => res.json())
     .then(data => {
         questions = data;
-        // console.log(data)
         startGame()
     })
-    .catch(error => console.log(error))
+    .catch((error) => {
+        alert("couldnt load questions")
+    })
 
-//Start game function
+/*
+Start Game function
+*/
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
-    //adds and hides loader while questions load
+    // Adds and hides loader while questions load
     game.classList.remove("hidden");
     loader.classList.add("hidden");
+
+    resetTimer();
+    update = setInterval("timer"(), oneSecond);
 };
 
-//Countdown timer for each question
+/*
+Countdown timer for each question
+*/
+
 timer = () => {
     //Set timer decreases 1 every second
     time = time - 1;
-    if (time < 30) {
-        //Display time left
-        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
+    if (time <= questionTime)
+    //Display time left
+    {
+        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`
     }
     if (time < 1) {
         //Moves to next question when time is up
-        clearInterval(update);
+        resetTimer();
         getNewQuestion();
     }
 };
@@ -62,12 +77,17 @@ timer = () => {
 //Checks if all questions are done, if not it goes on the next question and updates the choices
 
 getNewQuestion = () => {
+    resetTimer();
+
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        clearInterval(update);
         //Saves to local storage
         localStorage.setItem("mostRecentScore", score);
         //Takes user to the end page
         return window.location.assign('end.html');
     }
+
+
     // Updates the progress bar
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -91,10 +111,11 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
-// Alternative using JQuery
-// $(".choice-text").click(function(e){ 
-// });
+/* Resets the time */
 
+resetTimer = () => {
+    time = quesstionTime;
+}
 
 // Goes through all choices and attaching a click event to them
 choices.forEach(choice => {
@@ -119,12 +140,12 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 1000);
+        }, questionDelay);
 
     });
 });
 
 incrementScore = num => {
-    score += num;
+    score += CORRECT_BONUS;
     scoreText.innerText = score;
 };
