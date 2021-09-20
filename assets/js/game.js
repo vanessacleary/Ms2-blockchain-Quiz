@@ -11,7 +11,7 @@ const questionTime = 30;
 const questionDelay = 300;
 const oneSecond = 1000;
 //Points per score
-const CORRECT_BONUS = 1;
+const CORRECT_BONUS = 10;
 //Number of questions per game
 const MAX_QUESTIONS = 10;
 

@@ -11,16 +11,6 @@
     },
 
     {
-        "question": "What is a blockchain?",
-        "choice1": "A centralized digital ledger consisting of records called blocks.",
-        "choice2": "A a decentralized, distributed, digital ledger consisting of records called blocks.",
-        "choice3": "A digital database consisting of records called class.",
-        "choice4": "None of the above",
-        "answer": 2
-
-    },
-
-    {
         "question": "Bitcoin is created by ________.",
         "choice1": "Saifedean Ammous",
         "choice2": "Satoshi Nakamoto",

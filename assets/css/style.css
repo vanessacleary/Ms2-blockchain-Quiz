@@ -14,7 +14,7 @@ body {
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; \
+  padding: 0;
 }
 
 
@@ -26,7 +26,12 @@ h2 {
 h1 {
   font-size: 3.4rem;
   color: #56a5eb;
-  /* margin-bottom: 3rem; */
+}
+
+h1:hover {
+ color: rgba(86, 185, 235, 0.5);
+ transform: translateY(-0.1rem);
+ transition: transform 150ms;
 }
 
 h2 {
@@ -35,6 +40,7 @@ h2 {
   font-weight: 500;
   color: white;
 }
+
 
 
 /* FLEX-BOX CONTAINER */
@@ -201,7 +207,7 @@ p {
 /* Progress bar */
 
 #progressBar {
-  width: 18rem;
+  width: 12rem;
   height: 2rem;
   border: 0.4rem solid #56a5eb;
   margin-top: 1.5rem;
@@ -237,7 +243,7 @@ input::placholder {
 
 /* High Scores CSS */
 
-#highScoresList {
+#highScoreList {
   list-style: none;
   padding-left: 0;
   margin-bottom: 4rem;
@@ -295,29 +301,41 @@ input::placholder {
   color: #fff;
 }
 
+.modal {
+  border-color:#56a5eb;
+}
+
+.modal-text-center {
+  text-align: center!important;
+}
+
+.x-color {
+  color: #56a5eb;
+}
 
 .modal-header{
-  background: rgb(86,165,235);
-  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
+  background-color: #0b0e1e;
+  color: #56a5eb;
+  border-color:#56a5eb;
 }
 
 .modal-body {
-  background: rgb(86,165,235);
-  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
+  background-color: #0b0e1e;
+  color: #56a5eb;
 }
 
 .modal-body {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
-.modal-footer {
+/* .modal-footer {
   background: rgb(86,165,235);
   background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
-  
-}
+   */
+/* } */
 
 
-.btn-modal {
+/* .btn-modal {
   font-size: 1.8rem;
   padding: 1rem 0;
   width: 10rem;
@@ -327,7 +345,7 @@ input::placholder {
   text-decoration: none;
   color: #56a5eb;
   background-color: white;
-}
+} */
 
 
 @keyframes spin {
