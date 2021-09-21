@@ -1,4 +1,30 @@
-## Table of contents: 
+## Table of contents:
+ [Project Goals](#Project-Goals)
+* [User Expierence](#User-Expierence)
+    * [Site owner goals](#site-goals)
+    * [User Stories](#User-Stories)
+    * [First Time Visitor Goals](#First-Time-Visitor-Goals)
+    * [A Returning Visitor Goals](#Returning-Visitor-Goals)
+* [Design](#Design)
+    * [Wireframes](#Wireframes)
+    * [Colors](#Colors)
+    * [Typography](#Typography)
+    * [Imagery](#Imagery)
+* [Features](#Features)
+* [Features](#Future-Features)
+* [Technologies](#Technologies)
+    * [Languages](#Languages)
+    * [Frameworks & Tools](#Frameworks-&-Tools)
+* [Testing](#Testing)
+    * [Validation](#Validation)
+    * [Performance](#Performance)
+    * [Responsivness](#Responsivness)
+    * [Accessability](#Accessability)
+    * [Known Issues and Bugs](Known-Issues-and-Bugs)
+* [Deployment](#Deployment)
+* [Credits](#Credits)
+* [Awknowledgments](#Awknowledgments)
+
 ## Project Goals:
   Give players an opportunity to practice their Blockchain knowledge and compete for the highest score. This game contains questions for beginner, intermediate and advanced and the aim of the game is to help players gain knwledge and showcase their Blockchain knowledge. It is suitable for anyone who wants to learn about the blockchain, has minimum knowledge but wants to learn more or for those studying and working with blockchain
 
@@ -20,7 +46,7 @@
 * As a first time visitor, I want to be able to learn how the game works.
 * As a first time visitor, I want to be given a choice of varied questions.
 
-**Returning/ Frequent Visitor Goals**
+**Returning Visitor Goals**
 * As a returning user, I want to be given varied questions each time I play.
 * As a returning user, I want to be able to record my score and try to get on a leaderboard.
 * As a returning user, I want to see other users' previous scores so I can try to beat them.
@@ -30,14 +56,18 @@
 
 ### Wireframes
 
-* Balsamiq was used the create the wireframes for desktop and mobile.
+* Balsamiq was used the create the wireframes for desktop, mobile and tablet.
 * The finished website is the same as the original wireframes. 
 
 * The links to each one can be found here:
-   * Desktop[]
-   * Mobile[]
+   * [Desktop](docs/wireframes/Desktop-wireframe.JPG)
+   * [Mobile](docs/wireframes/Mobile-wireframe.JPG)
+   * [Tablet](docs/wireframes/Tablet-wireframe.JPG)
 
 ### Colors
+
+* I created a colour scheme of blue(#56a5eb) and navy(#0b0e1e) which were from the backgroud image. Blue and navy are bold string colors and compliment the blockchain theme. Blue is the branded color for the blockchain.
+![Color Scheme](/docs/features/colors.JPG)
 
 ### Typography 
 I chose 'Rubik' from Google Fonts. I chose this font because:
@@ -48,9 +78,6 @@ I chose 'Rubik' from Google Fonts. I chose this font because:
 * This website has one image as the main background across each page. It is a dark image with blue blockchains. This image was used as it complement the website theme and didn’t detract from the game.
 
 ## Features
-## Future Features
-
-The design and layout of the website is fully responsive for all devices.
 
 **Home Page**
 * A modal for the user to click to see how to play the game 
@@ -72,7 +99,7 @@ The design and layout of the website is fully responsive for all devices.
 * A button to let the user play again.
 * A button to take the user back to the home page.
 
-**Features I would like to implement**
+## Future Features*
 
 * Introduce levels of difficulty to the game
 * Add sound to the game that matches their score, e.g. a winning sound for above 70% and a fail sound for under 40% and an encouraging sound for the middle score.
@@ -134,7 +161,7 @@ The design and layout of the website is fully responsive for all devices.
    * I used this tool to compare colors for the website.
 
 ## Testing
-### Validator
+### Validation
 The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) were used to validate both pages of the project to ensure there were no syntax errors in the project.
 
 * W3C Markup Validator index.html - [Results](/docs/testing/index-validation.JPG)
@@ -161,11 +188,24 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
   * Click on the page name to see the results for mobile: [Home](docs/testing/index-lighthouse.JPG) | [game.html](docs/testing/game-lighthouse.JPG) | [End.html](docs/testing/end-lighthouse.JPG) | [Highscores](docs/testing/highscore-lighthouse.JPG) 
 
+### Responsiveness
+* The website was tested using  desk the 'inspect' option availabale on Google and Internet explorer for differnt screen sizes and mobile. The following devices showed zero errors with responsiveness or format. 
+* Devices:
+  * Samsung Galaxy S20 
+  * iPhone X
+  * iPhone 11
+  * Lenovo IdeaPad S340-14IIL
+  * Samsung A70
+  * Toshiba satellite 
+
 ### Accessability
-* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) gave the website a score of 91% accessability for both [desktop]() and [mobile](docs/testing/index-lighthouse.JPG) 
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) gave the website a score of 91% accessability for both [desktop](docs/testing/index-lighthouse-desktop.JPG) and [mobile](docs/testing/index-lighthouse.JPG) 
+
 
 ## Known Issues and Bugs
-
+* The highscores page only loads the scores of user, users cannot see other players highscores. This was discovered during the testing stage that I carried out with friends.
+* There is an issue with the spinning loader being displayed when the game is loading and when there is a delay between moving to the next question. 
+* For some questions on dekstop the prgress bar shows a little gap that shows the background color under the top margin, this is something minor that I would like to solve.
 
 ## Deployment
 
@@ -201,7 +241,7 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 ## Credits
 
 **Images:**
-  * Background image was taken from google images
+  * Background image was taken from [google images](https://www.google.com/imghp?hl=en)
 
 **Quiz Questions**
   * [Data-flair](https://data-flair.training/blogs/blockchain-quiz-test-knowledge/) Quiz 1, 2 & 3. 
@@ -209,17 +249,17 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
   * [quizizz.com](https://quizizz.com/admin/quiz/5b30675680a91b0019d30026/ibs-02-smart-contract-solidity-assessment)
 
 **Spinning Loader**
-  * W3schools was used to help build the spinning loader displayed before the questions were loaded.
+  * [W3schools](https://www.w3schools.com/) was used to help build the spinning loader displayed before the questions were loaded.
 
 **Display**
-  * Flexbox was used to help structure and display the layout of the game.
+  * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was used to help structure and display the layout of the game.
 
 **Tutorials**
-  *  James Q Quick YouTube course was used to help me create this game. It provided a strong foundation to build on to help me achieve the results I wanted. 
+  *  [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) YouTube course was used to help me create this game. It provided a strong foundation to build on to help me achieve the results I wanted. 
 
 ## Acknowledgements
 
 * Code Institute for providing endless help and resources to get me this far.
 * My mentor Reuben Ferrante for the help and patience to guide me through my first interactive-frontend project.
-* The Mini Feb 2021 group, wider slack community and the tutors for all the help, support and feedback for the last couple of weeks with a special mention to [Ashley Buy].(https://github.com/Ashb87) 
+* The Mini Feb 2021 group, wider slack community and the tutors for all the help, support and feedback for the last couple of weeks with a special mention to [Ashley Buy](https://github.com/Ashb87) 
 * Friends and Family who have taken their time to offer advice and feedback during the development of my project.
