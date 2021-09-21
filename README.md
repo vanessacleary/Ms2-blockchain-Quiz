@@ -40,6 +40,9 @@
 ### Colors
 
 ### Typography 
+I chose 'Rubik' from Google Fonts. I chose this font because:
+  * The bold weight and sharp edge works well with for the blockchain theme.
+  * It's also a sans-serif font which is more accessible for people with dyslexia. Sans-serif is the back-up font if Rubik fails.
 
 ### Imagery
 * This website has one image as the main background across each page. It is a dark image with blue blockchains. This image was used as it complement the website theme and didn’t detract from the game.
@@ -132,9 +135,38 @@ The design and layout of the website is fully responsive for all devices.
 
 ## Testing
 ### Validator
+The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) were used to validate both pages of the project to ensure there were no syntax errors in the project.
+
+* W3C Markup Validator index.html - [Results](/docs/testing/index-validation.JPG)
+  * The index.html passed with 0 error
+
+* W3C Markup Validator game.html - [Results](/docs/testing/game-validation.JPG)
+  * The game.html passed with 1 error for and empty <h1></h1>. This needs to remain emaply so the question counter can work when answers are choosen
+
+* W3C Markup Validator end.html - [Results](/docs/testing/end-validation.JPG)
+  * The end.html passed with 0 error
+
+* W3C Markup Validator highscores.html - [Results](/docs/testing/highscores-validation.JPG)
+  * The highscores.html passed with 0 error
+
+* W3C CSS Validator - [Results](/docs/testing/css-validation.JPG)
+  * The CSS passed with 0 errors
+
 ### Performance
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) was used to measure the performance and speed of the website. 
+   * Performance was 100% for desktop 
+   * Perfromance was 91% for mobile
+
+* Click on the page name to see the results for Desktop: [Home](docs/testing/index-lighthouse-desktop.JPG) | [game.html](docs/testing/game-lighthouse-desktop.JPG) | [End.html](docs/testing/end-lighthouse-desktop.JPG) | [Highscores](docs/testing/highscore-lighthouse-desktop.JPG)
+
+  * Click on the page name to see the results for mobile: [Home](docs/testing/index-lighthouse.JPG) | [game.html](docs/testing/game-lighthouse.JPG) | [End.html](docs/testing/end-lighthouse.JPG) | [Highscores](docs/testing/highscore-lighthouse.JPG) 
+
 ### Accessability
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) gave the website a score of 91% accessability for both [desktop]() and [mobile](docs/testing/index-lighthouse.JPG) 
+
 ## Known Issues and Bugs
+
+
 ## Deployment
 
 **Creating Repository**
@@ -167,4 +199,27 @@ The design and layout of the website is fully responsive for all devices.
 5. Once downloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
 
 ## Credits
+
+**Images:**
+  * Background image was taken from google images
+
+**Quiz Questions**
+  * [Data-flair](https://data-flair.training/blogs/blockchain-quiz-test-knowledge/) Quiz 1, 2 & 3. 
+  * [edureka](https://www.edureka.co/blog/interview-questions/blockchain-interview-questions/#Multiple_Block)
+  * [quizizz.com](https://quizizz.com/admin/quiz/5b30675680a91b0019d30026/ibs-02-smart-contract-solidity-assessment)
+
+**Spinning Loader**
+  * W3schools was used to help build the spinning loader displayed before the questions were loaded.
+
+**Display**
+  * Flexbox was used to help structure and display the layout of the game.
+
+**Tutorials**
+  *  James Q Quick YouTube course was used to help me create this game. It provided a strong foundation to build on to help me achieve the results I wanted. 
+
 ## Acknowledgements
+
+* Code Institute for providing endless help and resources to get me this far.
+* My mentor Reuben Ferrante for the help and patience to guide me through my first interactive-frontend project.
+* The Mini Feb 2021 group, wider slack community and the tutors for all the help, support and feedback for the last couple of weeks with a special mention to [Ashley Buy].(https://github.com/Ashb87) 
+* Friends and Family who have taken their time to offer advice and feedback during the development of my project.
