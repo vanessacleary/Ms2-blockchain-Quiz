@@ -86,7 +86,7 @@ The design and layout of the website is fully responsive for all devices.
    * I have used CSS3 to add my own custom styling and to change default bootstrap styling where and when needed.
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-* JavaScript has been used to implement the site's interactive features, Allowing the user to be interactive with the game.
+    * JavaScript has been used to implement the site's interactive features, Allowing the user to be interactive with the game.
 
 ### Frameworks, Libraries and Programs Used
 

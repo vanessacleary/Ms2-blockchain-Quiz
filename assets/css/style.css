@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+
+html {
+  font-size: 75%; 
+}
+
 body {
   background: url("../images/blockchain_background.JPG") center center;
   -webkit-background-size: cover;
@@ -7,7 +12,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Rubik', sans-serif;
-  font-size: 62.5%;
   color:#0c0f1e;
 }
 
@@ -24,7 +28,7 @@ h2 {
 } 
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 4rem;
   color: #56a5eb;
 }
 
@@ -57,8 +61,6 @@ h2 {
 
 .container> * {
   width: 90%;
-  /* width: 100%; */
- 
 }
 
 
@@ -121,7 +123,7 @@ h2 {
   width: 100%;
   font-size: 1rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
-  border-radius: 5px;
+  border-radius: .3rem;
   background-color: white;
 }
 
@@ -171,11 +173,11 @@ p {
 /* CORRECT & INCORRECT */
 
 .correct {
-  background-color: #28a745;
+  background-image: linear-gradient(rgb(92, 243, 32), rgb(255, 255, 255), rgb(92, 243, 32));
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-image: linear-gradient(#f31026, rgb(255, 255, 255), #f31026);
 }
 
 /* HUD */
@@ -261,11 +263,11 @@ input::placholder {
 
 #highScoresList {
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 1.8rem;
 }
 
 .high-score {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #fff;
 }
 
@@ -283,8 +285,8 @@ input::placholder {
 .social-media i {
   font-size: 4rem;
   color: #56a5eb;
-  padding: 5px;
-  margin: 10px;
+  padding: .3rem;
+  margin: .6rem;
 }
 
 .social-media i:hover {
