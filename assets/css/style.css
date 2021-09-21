@@ -42,7 +42,6 @@ h2 {
 }
 
 
-
 /* FLEX-BOX CONTAINER */
 
 .container {
@@ -86,6 +85,7 @@ h2 {
 }
 
 /* BUTTONS */
+
 .btn {
   font-size: 1.8rem;
   padding: .5rem 0;
@@ -168,7 +168,7 @@ p {
   color: #56a5eb;
 }
 
-/* correct and incorrect */
+/* CORRECT & INCORRECT */
 
 .correct {
   background-color: #28a745;
@@ -204,7 +204,7 @@ p {
     justify-content: space-between;
   }
 
-/* Progress bar */
+/* PROGRESS BAR */
 
 #progressBar {
   width: 12rem;
@@ -219,7 +219,7 @@ p {
   width: 0%;
 }
 
-/* End Screen from */
+/* END SCREEN FORM */
 
 form {
   width: 100%;
@@ -241,7 +241,7 @@ input::placholder {
   color: #aaa;
 }
 
-/* High Scores CSS */
+/* HIGH SCORES PAGE */
 
 #highScoreList {
   list-style: none;
@@ -259,7 +259,19 @@ input::placholder {
   transform: scale(1.025);
 }
 
-/* Soical media */
+#highScoresList {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.high-score {
+  font-size: 30px;
+  color: #fff;
+}
+
+
+/* SOCIAL MEDIA */
+
 .social-media {
   text-align: center;
 }
@@ -279,7 +291,8 @@ input::placholder {
   color: #736DD6;
 }
 
-/* Loader */
+/* LOADER */
+
 #loader {
   border: 1rem solid rgba(86, 185, 235, 0.5);
   border-radius: 50%;
@@ -289,17 +302,9 @@ input::placholder {
   animation: spin 2s linear infinite;
 }
 
-/* High scores */
 
-#highScoresList {
-  list-style: none;
-  margin-bottom: 30px;
-}
 
-.high-score {
-  font-size: 30px;
-  color: #fff;
-}
+/* MODAL */
 
 .modal {
   border-color:#56a5eb;
@@ -328,25 +333,7 @@ input::placholder {
   font-size: 1.5rem;
 }
 
-/* .modal-footer {
-  background: rgb(86,165,235);
-  background: linear-gradient(0deg, rgba(86,165,235,0) 0%, rgba(81,185,230,1) 100%);
-   */
-/* } */
-
-
-/* .btn-modal {
-  font-size: 1.8rem;
-  padding: 1rem 0;
-  width: 10rem;
-  text-align: center;
-  border: 0.2rem solid #56a5eb;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  color: #56a5eb;
-  background-color: white;
-} */
-
+/* LOADER SPIN */
 
 @keyframes spin {
   0% {
@@ -357,6 +344,8 @@ input::placholder {
     transform: rotate(360deg);
   }
 }
+
+/* MEDIA QUERY  */
 
 @media screen and (max-width: 575px) {
   h1 {
