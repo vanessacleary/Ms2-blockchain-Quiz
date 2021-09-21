@@ -74,7 +74,7 @@ resetTimer = () => {
     time = questionTime;
 }
 
-//Checks if all questions are done, if not it goes on the next question and updates the choices
+// Checks if all questions are done, if not it goes on the next question and updates the choices
 getNewQuestion = () => {
     resetTimer();
 
@@ -91,7 +91,7 @@ getNewQuestion = () => {
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-    //Updates question and choices
+    // Updates question and choices
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -116,17 +116,17 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
-        //Applies css styling for right or wrong answers choosen 
+        // Applies css styling for right or wrong answers choosen 
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-        //Increments players score for choosing the right answers
+        // Increments players score for choosing the right answers
         if (classToApply == 'correct') {
             incrementScore();
         };
 
         selectedChoice.parentElement.classList.add(classToApply);
 
-        //Adds delay before next question and removes CSS styling to answers
+        // Adds delay before next question and removes CSS styling to answers
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();

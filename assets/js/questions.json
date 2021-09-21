@@ -136,5 +136,80 @@
     "answer": 4
 }
 
+{
+    "question": "In blockchain, blocks are linked",
+
+    "choice1": "Backward to the previous block",
+    "choice2": "Forward to next block",
+    "choice3": "Not linked with each other",
+    "choice4": "Other",
+    "answer": 1
+}
+
+{
+    "question": "Which of the following is asymmetric encryption Algorithm?",
+
+    "choice1": "Blowfish",
+    "choice2": "Twofish",
+    "choice3": "RSA",
+    "choice4": "Tripple DEA",
+    "answer": 3
+}
+
+
+{
+    "question": "Blockchain can be stored as which of the following?",
+
+    "choice1": "A flat file",
+    "choice2": "A Database",
+    "choice3": "Both of the above",
+    "choice4": "None of the above",
+    "answer": 3
+}
+
+
+{
+    "question": "The primary benefit of immutability is…",
+
+    "choice1": "Scalability",
+    "choice2": "Increased Efficiency ",
+    "choice3": "Improved Security",
+    "choice4": "Tamper Proof",
+    "answer": 1
+}
+
+
+{
+    "question": "Bitcoin is based on ________ blockchain?",
+
+    "choice1": "Private",
+    "choice2": "Public ",
+    "choice3": "Public Permissioned",
+    "choice4": "Permissioned",
+    "answer": 2
+}
+
+
+{
+    "question": "",
+
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 4
+}
+
+
+{
+    "question": "",
+
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 4
+}
+
 
 ]
