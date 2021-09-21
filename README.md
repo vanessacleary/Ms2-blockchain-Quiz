@@ -1,104 +1,170 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Table of contents: 
+## Project Goals:
+  Give players an opportunity to practice their Blockchain knowledge and compete for the highest score. This game contains questions for beginner, intermediate and advanced and the aim of the game is to help players gain knwledge and showcase their Blockchain knowledge. It is suitable for anyone who wants to learn about the blockchain, has minimum knowledge but wants to learn more or for those studying and working with blockchain
 
-Welcome vanessacleary,
+## User Expierence: 
+### Site goals:
+**Site Owners Goals:** 
+* As a site owner I want to create an attractive, responsive and easy to use game for the user.
+* As a site owner I want the site to work as intended, loading new questions and incrementing the score as the user progresses with a count timer for each question.
+* As a site owner I want create game with a varied choice of questions
+* As a site owner I want users to be able to save their score
+* As a site owner I wants users to navigate easily through different pages of the site
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+### User Stories:
 
-## Gitpod Reminders
+**First Time Visitor Goals**
+* As a first time visitor, I want the game to be attractive and easy to read.
+* As a first time visitor, I want the game to be responsive to whichever device I am playing it on.
+* As a first time visitor, I want to be able to navigate around the different pages of the site.
+* As a first time visitor, I want to be able to learn how the game works.
+* As a first time visitor, I want to be given a choice of varied questions.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+**Returning/ Frequent Visitor Goals**
+* As a returning user, I want to be given varied questions each time I play.
+* As a returning user, I want to be able to record my score and try to get on a leaderboard.
+* As a returning user, I want to see other users' previous scores so I can try to beat them.
 
-`python3 -m http.server`
+## Design:
+* The design of the website was chosen with the topic in mind. It was designed to be visually pleasing for the game players with an easy UX to guide players to the different elements. This was achieved by using 2 block colors with contrasting hover effects. The theme was kept consistent throughout each web page.
 
-A blue button should appear to click: _Make Public_,
+### Wireframes
 
-Another blue button should appear to click: _Open Browser_.
+* Balsamiq was used the create the wireframes for desktop and mobile.
+* The finished website is the same as the original wireframes. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* The links to each one can be found here:
+   * Desktop[]
+   * Mobile[]
 
-A blue button should appear to click: _Make Public_,
+### Colors
 
-Another blue button should appear to click: _Open Browser_.
+### Typography 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Imagery
+* This website has one image as the main background across each page. It is a dark image with blue blockchains. This image was used as it complement the website theme and didn’t detract from the game.
 
-To log into the Heroku toolbelt CLI:
+## Features
+## Future Features
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The design and layout of the website is fully responsive for all devices.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+**Home Page**
+* A modal for the user to click to see how to play the game 
+* A play button that for the user to start the game
+* A highscores page where the user can compete to get on the leaderboard.
+* Social media links, the websites creators github and linkedin were chosen to for portfolio purposes
 
-------
+**Game Page**
+* A question counter that shows the user which question number they are on out of 10.
+* A score counter that increases the users score by 10 for each question they get right.
+* A question and 4 possible answers to choose from. The selected answer will turn red if it is wrong and green if it is correct.
+* A 30 second timer that counts down on screen and resets for each new question and moves to the next question when the answer is chosen.
+* A home button that will take the user back to the main page.
+* A spinning loader is displayed briefly on screen before the questions are loaded.
 
-## Release History
+**End Page**
+* A record of the users score is shown
+* An option for the user to enter their name and save their score, the score will be shown on the highscores page if it high enough 
+* A button to let the user play again.
+* A button to take the user back to the home page.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Features I would like to implement**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Introduce levels of difficulty to the game
+* Add sound to the game that matches their score, e.g. a winning sound for above 70% and a fail sound for under 40% and an encouraging sound for the middle score.
+* Take the user to the highscore spage when the submit their score
+* The option for the user to share their score on social media
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Technologies used
+### Languages used
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+   * The project uses HTML5 to make up the basic elements and structure of the website.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+   * I have used CSS3 to add my own custom styling and to change default bootstrap styling where and when needed.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* JavaScript has been used to implement the site's interactive features, Allowing the user to be interactive with the game.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Frameworks, Libraries and Programs Used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+   * The Bootstrap framework was used to help build the responsive structure of the site and add default styling.
+   * It was also used to import JavaScript and Jquery which was used for the modal.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* [Google Fonts](https://fonts.google.com/)
+   * Google fonts were used to import the 'Rubik' font into the style.css file which is used on all pages throughout the project.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* [Font Awesome](https://fontawesome.com/)
+   * Font Awesome was used on the index.htm page and the game.html page on the website to add icons for aesthetic UX purposes and visual aid purposes. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* [jQuery](https://en.wikipedia.org/wiki/JQuery)
+   * jQuery came with Bootstrap to make the modal responsive.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* [Git](https://www.gitpod.io/)
+   * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* [GitHub](https://github.com/)
+   * GitHub is used to store the project's code after being pushed from Git.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* [Balsamiq](https://balsamiq.com/)
+   * Balsamiq was used to create the wireframes during the design process.
 
-------
+* [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
+   * I used Google chromes built in developer tools to help with the styling of the site, selecting colors and to troubleshoot any bugs I found.
 
-## FAQ about the uptime script
+* [Am I responsive](http://ami.responsivedesign.is/)
+   * This was used to check responsiveness on different screen sizes and create the showcase image for the project.
 
-**Why have you added this script?**
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)
+   * I used Google lighthouse to test the performance of my site.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* [The W3C Markup Validation Service](https://validator.w3.org/)
+   * I used this validation tool to check my HMTL for errors.
 
-**How will this affect me?**
+* [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+   * I used this validation tool to check my CSS for errors.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* [Color contrast](https://wave.webaim.org/report#/https://tararhoseyn.github.io/CardiffSwimCentreMS1/)
+   * I used this tool to compare colors for the website.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Testing
+### Validator
+### Performance
+### Accessability
+## Known Issues and Bugs
+## Deployment
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+**Creating Repository**
+1. I created the repository using the following steps:
+2. I logged into my GitHub account and clicked the green button near the top left of the page displaying the text 'NEW'.
+3. This took me to a page with the option to create a new repository. Under the repository template I clicked on the code institute template. 
+4. I chose a name for my repository and then clicked the create repository button.
+5. I opened the new repository and clicked the green gitpod button to create a new workspace in Git Pod for writing and editing my code to develop the website.
 
-**So….?**
+### GitHub pages
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+**My project was deployed to GitHub pages using the following steps:**
 
-**Can I opt out?**
+1. I logged in to my GitHub account and opened the relevant repository.
+2. I clicked on the settings button.
+3. In settings I scrolled down to the GitHub 'pages' tab.
+4. Under source I clicked the dropdown button labelled 'None' and selected Master Branch.
+5. This then provided mw with the link to the website.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Forking the GitHub Repository
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/vanessacleary/vanessacleary-Ms1-2021)
+2. At the top of the Repository just above the "Settings" Button on the menu, locate the "Fork" Button and click.
+3. This will provide you with a copy of the original repository in your GitHub account.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Making a clone
+1. To make a clone of my project use the following steps.
+2. Go to my account and locate the relevant repository.
+3. Next to the green Gitpod button, click on CODE.
+4. Click on Download Zip.
+5. Once downloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
 
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Credits
+## Acknowledgements

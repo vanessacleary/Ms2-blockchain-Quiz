@@ -88,7 +88,7 @@
     "choice1": "Follows nouns",
     "choice2": "A hash function",
     "choice3": "Prevents double spending",
-    "choice4": " Sends information to the blockchain network",
+    "choice4": "Sends information to the blockchain network",
     "answer": 3
 },
 
@@ -118,7 +118,7 @@
 {
     "question": "What is Proof of Stake?",
 
-    "choice1": " A certificate needed to use the blockchain",
+    "choice1": "A certificate needed to use the blockchain",
     "choice2": "A password needed to access an exchange",
     "choice3": "How private keys are made",
     "choice4": "A transaction and block verification protocol",
@@ -129,10 +129,10 @@
 {
     "question": "How often does Bitcoin ledger reconcile?",
 
-    "choice1": " Every day",
+    "choice1": "Every day",
     "choice2": "Every 3 months",
-    "choice3": " Every 3 Minutes",
-    "choice4": " Every 10 Minutes",
+    "choice3": "Every 3 Minutes",
+    "choice4": "Every 10 Minutes",
     "answer": 4
 },
 
@@ -254,7 +254,7 @@
     "question": "What are the different types of token?",
 
     "choice1": "Platform, privacy, currency",
-    "choice2": "☐ Platform, distributed, currency",
+    "choice2": "Platform, distributed, currency",
     "choice3": "Network, distributed, currency",
     "choice4": "Platform, privacy, generic",
     "answer": 1

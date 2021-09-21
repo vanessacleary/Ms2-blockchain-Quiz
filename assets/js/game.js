@@ -10,12 +10,12 @@ const game = document.getElementById("game");
 const questionTime = 30;
 const questionDelay = 300;
 const oneSecond = 1000;
-//Points per score
+// Points per score
 const CORRECT_BONUS = 10;
-//Number of questions per game
+// Number of questions per game
 const MAX_QUESTIONS = 10;
 
-//Let
+// Let
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -54,16 +54,16 @@ startGame = () => {
     update = setInterval("timer()", oneSecond);
 };
 
-//Countdown timer for each question
+// Countdown timer for each question
 timer = () => {
-    //Set timer decreases 1 every second
+    // Set timer decreases 1 every second
     time = time - 1;
     if (time <= questionTime) {
-        //Display time left
+        // Display time left
         timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
     }
     if (time <= 0) {
-        //Moves to next question when time is up
+        // Moves to next question when time is up
         resetTimer();
         getNewQuestion();
     }
@@ -80,9 +80,9 @@ getNewQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         clearInterval(update);
-        //Saves to local storage
+        // Saves to local storage
         localStorage.setItem("mostRecentScore", score);
-        //Takes user to the end page
+        // Takes user to the end page
         return window.location.assign('end.html');
     }
 
