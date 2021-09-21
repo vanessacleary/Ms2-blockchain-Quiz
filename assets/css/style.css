@@ -334,6 +334,22 @@ input::placholder {
   font-size: 1.5rem;
 }
 
+/* 404 PAGE */
+
+.error-heading {
+  color: #fff;
+}
+
+/* INDEX.HTML FOOT NOTES */
+
+.copy-right {
+  color: #fff;
+}
+
+.policy {
+  color: #fff;
+}
+
 /* LOADER SPIN */
 
 @keyframes spin {

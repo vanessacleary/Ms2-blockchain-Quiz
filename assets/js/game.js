@@ -25,6 +25,8 @@ let questions = [];
 // Initialize to the maximum time for the first question
 let time = questionTime;
 
+// Used James Q Quick video on YouTube for reference-link can be found in credits section of README file
+
 /* 
 Pulling questions from Json file 
 */

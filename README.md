@@ -1,3 +1,9 @@
+## Miletsone Project 2 | Blockchain Technology Quiz
+
+![Website overview](/docs/features/am-i-responsive.JPG)
+
+[Live website can be viewed here](https://vanessacleary.github.io/Ms2-blockchain-Quiz/)
+
 ## Table of contents:
  [Project Goals](#Project-Goals)
 * [User Expierence](#User-Expierence)
@@ -101,10 +107,11 @@ I chose 'Rubik' from Google Fonts. I chose this font because:
 
 ## Future Features*
 
-* Introduce levels of difficulty to the game
-* Add sound to the game that matches their score, e.g. a winning sound for above 70% and a fail sound for under 40% and an encouraging sound for the middle score.
-* Take the user to the highscore spage when the submit their score
-* The option for the user to share their score on social media
+* Introduce levels of difficulty to the game.
+* Add sound to the game that matches a score level, e.g. a winning sound for above 70% and a fail sound for under 40% and an encouraging sound for the middle score.
+* Take the user to the highscore spage when the submit their score.
+* Add a feedback message to the end.html when a score is reached or missed e.g good job or better or better luck next time.
+* The option for the user to share their score on social media.
 
 ## Technologies used
 ### Languages used
@@ -160,6 +167,9 @@ I chose 'Rubik' from Google Fonts. I chose this font because:
 * [Color contrast](https://wave.webaim.org/report#/https://tararhoseyn.github.io/CardiffSwimCentreMS1/)
    * I used this tool to compare colors for the website.
 
+* [Online JavaScript Beautifier](https://beautifier.io/)
+   * I used this tool to help format the javascript code
+
 ## Testing
 ### Validation
 The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) were used to validate both pages of the project to ensure there were no syntax errors in the project.
@@ -209,7 +219,7 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
 ## Deployment
 
-**Creating Repository**
+**Creating Repository:**
 1. I created the repository using the following steps:
 2. I logged into my GitHub account and clicked the green button near the top left of the page displaying the text 'NEW'.
 3. This took me to a page with the option to create a new repository. Under the repository template I clicked on the code institute template. 
@@ -243,18 +253,18 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 **Images:**
   * Background image was taken from [google images](https://www.google.com/imghp?hl=en)
 
-**Quiz Questions**
+**Quiz Questions:**
   * [Data-flair](https://data-flair.training/blogs/blockchain-quiz-test-knowledge/) Quiz 1, 2 & 3. 
   * [edureka](https://www.edureka.co/blog/interview-questions/blockchain-interview-questions/#Multiple_Block)
   * [quizizz.com](https://quizizz.com/admin/quiz/5b30675680a91b0019d30026/ibs-02-smart-contract-solidity-assessment)
 
-**Spinning Loader**
+**Spinning Loader:**
   * [W3schools](https://www.w3schools.com/) was used to help build the spinning loader displayed before the questions were loaded.
 
-**Display**
+**Display:**
   * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was used to help structure and display the layout of the game.
 
-**Tutorials**
+**Tutorials:**
   *  [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) YouTube course was used to help me create this game. It provided a strong foundation to build on to help me achieve the results I wanted. 
 
 ## Acknowledgements
