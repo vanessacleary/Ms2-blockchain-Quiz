@@ -134,7 +134,7 @@
     "choice3": " Every 3 Minutes",
     "choice4": " Every 10 Minutes",
     "answer": 4
-}
+},
 
 {
     "question": "In blockchain, blocks are linked",
@@ -144,7 +144,7 @@
     "choice3": "Not linked with each other",
     "choice4": "Other",
     "answer": 1
-}
+},
 
 {
     "question": "Which of the following is asymmetric encryption Algorithm?",
@@ -154,7 +154,7 @@
     "choice3": "RSA",
     "choice4": "Tripple DEA",
     "answer": 3
-}
+},
 
 
 {
@@ -165,7 +165,7 @@
     "choice3": "Both of the above",
     "choice4": "None of the above",
     "answer": 3
-}
+},
 
 
 {
@@ -176,7 +176,7 @@
     "choice3": "Improved Security",
     "choice4": "Tamper Proof",
     "answer": 1
-}
+},
 
 
 {
@@ -187,29 +187,131 @@
     "choice3": "Public Permissioned",
     "choice4": "Permissioned",
     "answer": 2
-}
+},
 
 
 {
-    "question": "",
+    "question": "Which of the following is NOT included in a block header?",
 
-    "choice1": "",
-    "choice2": "",
-    "choice3": "",
-    "choice4": "",
+    "choice1": "Hash of previous block",
+    "choice2": "Nonce",
+    "choice3": "Bitcoin",
+    "choice4": "Timestamp",
+    "answer": 3
+},
+
+{
+    "question": "Which of the following is not part of the ethereum blockchain?",
+
+    "choice1": "Stellar",
+    "choice2": "Kovan",
+    "choice3": "Rinkeby",
+    "choice4": "Ropsten",
+    "answer": 1
+},
+
+{
+    "question": "What is used for accessing a wallet?",
+
+    "choice1": "Private key",
+    "choice2": "Seed",
+    "choice3": "Public key",
+    "choice4": "Password",
+    "answer": 1
+},
+
+{
+    "question": "What is ERC20?",
+
+    "choice1": "Node",
+    "choice2": "Token Standard",
+    "choice3": "Wallet",
+    "choice4": "Smart contract",
+    "answer": 2
+},
+
+{
+    "question": "What does Dapp means?",
+
+    "choice1": "Decentralized Application",
+    "choice2": "Dintermediate Application",
+    "choice3": "Distributed Application",
+    "choice4": "Downloadable Application",
+    "answer": 1
+},
+
+{
+    "question": "When a record is in a chain, who can access it?",
+
+    "choice1": "Nobody",
+    "choice2": "Everybody",
+    "choice3": "One person at a time",
+    "choice4": "Only the people involved in the transaction",
     "answer": 4
-}
+},
+
+{
+    "question": "What are the different types of token?",
+
+    "choice1": "Platform, privacy, currency",
+    "choice2": "☐ Platform, distributed, currency",
+    "choice3": "Network, distributed, currency",
+    "choice4": "Platform, privacy, generic",
+    "answer": 1
+},
+
+{
+    "question": "What is the ledger type used by Bitcoin?",
+
+    "choice1": "Decentralized ledger",
+    "choice2": "Distributed ledger",
+    "choice3": "Distributed and decentralized ledger",
+    "choice4": "None of the above",
+    "answer": 3
+},
+
+{
+    "question": "What are the main cryptographic concepts in blockchain?",
+
+    "choice1": "Hashing and public key",
+    "choice2": "Login and digital signature",
+    "choice3": "Hashing and digital signature",
+    "choice4": "Pin code and hashing",
+    "answer": 1
+},
 
 
 {
-    "question": "",
+    "question": "What are the different types of blockchain?",
 
-    "choice1": "",
-    "choice2": "",
-    "choice3": "",
-    "choice4": "",
+    "choice1": "Public, private, generic",
+    "choice2": "Public, secret, consortium",
+    "choice3": "Generic, secret, consortium",
+    "choice4": "Public, private, consortium",
     "answer": 4
-}
+},
 
+
+{
+    "question": "What is Ethereum?",
+
+    "choice1": "The name of a public blockchain",
+    "choice2": "The name of a peer to peer network",
+    "choice3": "A commercial blockchain-based protocol featuring a smart contract manager",
+    "choice4": "An open-source blockchain-based distributed computing platform featuring smart contract functionality.",
+    "answer": 4
+},
+
+
+{
+    "question": "What is the name of the language used within Ethereum to implement smart contracts?",
+
+    "choice1": "Python",
+    "choice2": "Solidity",
+    "choice3": "Java",
+    "choice4": "Algol 68",
+    "answer": 2
+}
 
 ]
+
