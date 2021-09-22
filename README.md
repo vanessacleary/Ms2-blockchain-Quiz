@@ -205,7 +205,8 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
     * Each question has a 30 second timer for the user to answer the question, if an answer is not choose the game will move to the next question 
 
 * Progress Bar
-![Progress Bar](/docs/features/progress-barJPG)
+
+![Progress Bar](/docs/features/progress-bar.JPG)
 
 * Score
 
