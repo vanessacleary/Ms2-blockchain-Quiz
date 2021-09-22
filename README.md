@@ -264,7 +264,7 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
 ## Known Issues and Bugs
 * The highscores page only loads the scores of player from local storage, users cannot see other players highscores. This was discovered during the testing stage that I carried out with friends.
-* There is an issue with the spinning loader being displayed when the game is loading and when there is a delay between moving to the next question. 
+* There is an issue with the spinning loader being displayed when the game is loading and when there is a delay between moving to the next question sometimes the loader appears on the right side if the screen on mobile. 
 
 ## Deployment
 
