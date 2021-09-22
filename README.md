@@ -72,7 +72,7 @@
 
 ### Colors
 
-* I created a colour scheme of blue(#56a5eb) and navy(#0b0e1e) which were from the backgroud image. Blue and navy are bold string colors and compliment the blockchain theme. Blue is the branded color for the blockchain.
+* I created a colour scheme of blue (#56a5eb) and navy (#0b0e1e) which were from the backgroud image. Blue and navy are bold string colors and compliment the blockchain theme. Blue is the branded color for the blockchain.
 ![Color Scheme](/docs/features/colors.JPG)
 
 ### Typography 
@@ -81,7 +81,9 @@ I chose 'Rubik' from Google Fonts. I chose this font because:
   * It's also a sans-serif font which is more accessible for people with dyslexia. Sans-serif is the back-up font if Rubik fails.
 
 ### Imagery
-* This website has one image as the main background across each page. It is a dark image with blue blockchains. This image was used as it complement the website theme and didn’t detract from the game.
+* This website has one image has the same background image across each page. It is a dark image with blue blockchains. This image was used as it complement the website theme and didn’t detract from the game.
+![Color Scheme](/docs/features/background-image.JPG)
+
 
 ## Features
 
@@ -105,13 +107,14 @@ I chose 'Rubik' from Google Fonts. I chose this font because:
 * A button to let the user play again.
 * A button to take the user back to the home page.
 
-## Future Features*
+## Future Features
 
 * Introduce levels of difficulty to the game.
 * Add sound to the game that matches a score level, e.g. a winning sound for above 70% and a fail sound for under 40% and an encouraging sound for the middle score.
 * Take the user to the highscore spage when the submit their score.
 * Add a feedback message to the end.html when a score is reached or missed e.g good job or better or better luck next time.
 * The option for the user to share their score on social media.
+* I started this project with the plan to use an API, I learned too late that there was no API on the topic I choose, in the future I would hope to find a way to load questions from an API.
 
 ## Technologies used
 ### Languages used
@@ -189,6 +192,52 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 * W3C CSS Validator - [Results](/docs/testing/css-validation.JPG)
   * The CSS passed with 0 errors
 
+### Testing Site Goals
+  * As a site owner I want to create an attractive, responsive and easy to use game for the user. 
+     * I got regular feedback from friends family and code institue students on Slack.  The feedback on the design, theme and block colors 
+
+ * As a site owner I want the site to work as intended, loading new questions and incrementing the score as the user progresses with a count timer for each question. 
+
+    * The game was tested many times on multiple devices throughout the creation of this game. All functions work as intended. The question counter goes from 1 to 10 and finishes the game on the 10th question, taking the user to the end game where they have the option to submit their score.
+
+    * The score increases for every correct question chosen by 10 points. 
+
+    * Each question has a 30 second timer for the user to answer the question, if an answer is not choose the game will move to the next question 
+
+* Progress Bar
+![Progress Bar](/docs/features/progress-barJPG)
+
+* Score
+
+![Score](/docs/features/score.JPG)
+
+* Timer
+
+![Timer](/docs/features/timer.JPG)
+
+* As a site owner I want create game with a varied choice of questions
+
+    * I used multiple sources to get a variety of questions for different levels. This gives the users a chance to learn as they play.
+
+* As a site owner I want users to be able to save their score
+
+    * Players are taken to an end screen when the game is finished where they have the option to save their name and score. This is saved in local storage and the top 5 scores are pulled and displayed from local storage and shown on the screen.
+
+![Save Score](/docs/features/highscores-screen.JPG) 
+
+* As a site owner I wants users to navigate easily through different pages of the site
+
+    * There are clear and steps on the game to help users navigate the game
+
+    * From the homepage the player can check the rules on an easy pop up modal, play the game or check the highscores leaderboard. These are all easy to navigate and work with one click.  
+
+    * When a player enters the game, they have the option to end the game by hitting the ‘home’ button to return to the homepage. 
+
+   * When a player reaches the end of the game, they have an option to navigate back to the homepage or play again. 
+
+* All of these links work as expected and have been tested many times across different devices, each time with the same positive result.
+
+
 ### Performance
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) was used to measure the performance and speed of the website. 
    * Performance was 100% for desktop 
@@ -213,9 +262,8 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
 
 ## Known Issues and Bugs
-* The highscores page only loads the scores of user, users cannot see other players highscores. This was discovered during the testing stage that I carried out with friends.
+* The highscores page only loads the scores of player from local storage, users cannot see other players highscores. This was discovered during the testing stage that I carried out with friends.
 * There is an issue with the spinning loader being displayed when the game is loading and when there is a delay between moving to the next question. 
-* For some questions on dekstop the prgress bar shows a little gap that shows the background color under the top margin, this is something minor that I would like to solve.
 
 ## Deployment
 

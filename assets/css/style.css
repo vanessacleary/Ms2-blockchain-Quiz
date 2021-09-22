@@ -217,7 +217,7 @@ p {
 }
 
 #progressBarFull {
-  height: 1.5rem;
+  height: 1.6rem;
   background-color: #56a5eb;
   width: 0%;
 }
@@ -348,6 +348,10 @@ input::placholder {
 
 .policy {
   color: #fff;
+}
+
+.end-div {
+  margin-top: 2rem;
 }
 
 /* LOADER SPIN */
