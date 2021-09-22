@@ -10,29 +10,29 @@
     * [Site owner goals](#site-goals)
     * [User Stories](#User-Stories)
     * [First Time Visitor Goals](#First-Time-Visitor-Goals)
-    * [A Returning Visitor Goals](#Returning-Visitor-Goals)
+    * [Returning Visitor Goals](#Returning-Visitor-Goals)
 * [Design](#Design)
     * [Wireframes](#Wireframes)
     * [Colors](#Colors)
     * [Typography](#Typography)
     * [Imagery](#Imagery)
 * [Features](#Features)
-* [Features](#Future-Features)
+* [Future Features](#Future-Features)
 * [Technologies](#Technologies)
     * [Languages](#Languages)
     * [Frameworks & Tools](#Frameworks-&-Tools)
 * [Testing](#Testing)
     * [Validation](#Validation)
     * [Performance](#Performance)
-    * [Responsivness](#Responsivness)
+    * [Responsiveness](#Responsiveness)
     * [Accessability](#Accessability)
-    * [Known Issues and Bugs](Known-Issues-and-Bugs)
+    * [Known Issues and Bugs](#Known-Issues-and-Bugs)
 * [Deployment](#Deployment)
 * [Credits](#Credits)
-* [Awknowledgments](#Awknowledgments)
+* [Acknowledgements](#Acknowledgements)
 
 ## Project Goals:
-  Give players an opportunity to practice their Blockchain knowledge and compete for the highest score. This game contains questions for beginner, intermediate and advanced and the aim of the game is to help players gain knwledge and showcase their Blockchain knowledge. It is suitable for anyone who wants to learn about the blockchain, has minimum knowledge but wants to learn more or for those studying and working with blockchain
+  To give players an opportunity to practice their Blockchain knowledge and compete for the highest score. This game contains questions for beginner, intermediate and advanced and the aim of the game is to help players gain knowledge and practice their Blockchain knowledge. It is suitable for anyone who wants to learn about the blockchain, has minimum knowledge but wants to learn more or for those studying and working with blockchain
 
 ## User Expierence: 
 ### Site goals:

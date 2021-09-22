@@ -137,7 +137,7 @@
     },
 
     {
-        "question": "In blockchain, blocks are linked",
+        "question": "In blockchain, blocks are linked...",
 
         "choice1": "Backward to the previous block",
         "choice2": "Forward to next block",
@@ -228,16 +228,6 @@
         "choice3": "Wallet",
         "choice4": "Smart contract",
         "answer": 2
-    },
-
-    {
-        "question": "What does Dapp means?",
-
-        "choice1": "Decentralized Application",
-        "choice2": "Dintermediate Application",
-        "choice3": "Distributed Application",
-        "choice4": "Downloadable Application",
-        "answer": 1
     },
 
     {
