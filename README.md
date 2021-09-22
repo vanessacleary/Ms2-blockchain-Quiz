@@ -204,15 +204,15 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
     * Each question has a 30 second timer for the user to answer the question, if an answer is not choose the game will move to the next question 
 
-* Progress Bar
+* **Progress Bar**
 
 ![Progress Bar](/docs/features/progress-bar.JPG)
 
-* Score
+* **Score**
 
 ![Score](/docs/features/score.JPG)
 
-* Timer
+* **Timer**
 
 ![Timer](/docs/features/timer.JPG)
 
@@ -320,5 +320,5 @@ The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Ser
 
 * Code Institute for providing endless help and resources to get me this far.
 * My mentor Reuben Ferrante for the help and patience to guide me through my first interactive-frontend project.
-* The Mini Feb 2021 group, wider slack community and the tutors for all the help, support and feedback for the last couple of weeks with a special mention to [Ashley Buy](https://github.com/Ashb87) 
+* The Mini Feb 2021 group, wider slack community and the tutors for all the help, support and feedback for the last couple of weeks with a special mention to [Ashley Buy](https://github.com/Ashb87). 
 * Friends and Family who have taken their time to offer advice and feedback during the development of my project.
